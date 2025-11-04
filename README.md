@@ -1,24 +1,22 @@
-# README
+Welcome to GPT&Me, a brand new dev series where I build real apps side-by-side with AI. Live.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In episode 0, I lay out what this project is all about: simple, powerful, well-documented Ruby on Rails apps built with the help of ChatGPT.
 
-Things you may want to cover:
+We’ll be using:
+⚙️ Ruby on Rails (on WSL)
+🪣 AWS for image hosting & DNS
+🐘 PostgreSQL (migrating from MySQL)
+☁️ Heroku for live deployment
+💾 Git for version control
 
-* Ruby version
+Each app connects to the next:
+✅ A task manager that evolves into a calendar
+✅ A blog system
+✅ A photo gallery
+✅ A dashboard with integrated goals & metrics
 
-* System dependencies
+By the end of this series, we’ll have a full ecosystem of productivity apps working together — lightweight, scalable, and AI-assisted every step of the way.
 
-* Configuration
+So if you want to learn how to actually build with AI, get inspired, or just watch a dev try not to rage quit… Follow along!
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For detailed notes on project changes, please review the changelog.
