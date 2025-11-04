@@ -1,5 +1,11 @@
 ## [0.0.0] – Unreleased
 
+### Changed
+- database.yml
+    - Make it work for heroku
+
+## [0.0.0] – Unreleased
+
 ### Added
 - **Rails App Setup**
   - Initialized new Rails 7 application using PostgreSQL (`rails new . --database=postgresql`)
