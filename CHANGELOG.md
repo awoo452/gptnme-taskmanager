@@ -1,5 +1,32 @@
 ## [0.0.0] – Unreleased
 
+### Added
+- **TasksController#complete**
+  - New `complete` action to mark a task as completed
+  - Sets `status` to `3`
+- **Routes**
+  - Added `patch "tasks/:id/complete"` for the complete action
+- **Views**
+  - Added “Complete Task” button on `show.html.erb`
+  - Added global navigation via `_navbar.html.erb` included in `application.html.erb`
+- **Form**
+  - Added status dropdown selector in `_form.html.erb` to replace numeric input
+
+### Changed
+- **TasksController**
+  - Updated to support complete action logic
+- **show.html.erb**
+  - Now displays edit, delete, and complete buttons
+
+### Notes
+- **Standardized Status Codes:**
+  - `0` = Not Started  
+  - `1` = In Progress  
+  - `2` = On Hold  
+  - `3` = Completed
+
+## [0.0.0] – Unreleased
+
 ### Changed
 - database.yml
     - Make it work for heroku

@@ -1,6 +1,31 @@
 <h1><%= @task.task_name %></h1>
-<p><%= @task.description %></p>
+
+<p><strong>Description:</strong> <%= @task.description %></p>
+<ul>
+  <li><strong>Specific:</strong> <%= @task.specific %></li>
+  <li><strong>Measurable:</strong> <%= @task.measurable %></li>
+  <li><strong>Achievable:</strong> <%= @task.achievable %></li>
+  <li><strong>Relevant:</strong> <%= @task.relevant %></li>
+  <li><strong>Time-bound:</strong> <%= @task.time_bound %></li>
+  <li><strong>Start Date:</strong> <%= @task.start_date %></li>
+  <li><strong>Due Date:</strong> <%= @task.due_date %></li>
+  <li><strong>Completion Date:</strong> <%= @task.completion_date %></li>
+  <li><strong>Status:</strong> <%= @task.status_label %></li>
+  <li><strong>Priority:</strong> <%= @task.priority %></li>
+  <li><strong>Created At:</strong> <%= @task.created_at %></li>
+  <li><strong>Updated At:</strong> <%= @task.updated_at %></li>
+</ul>
+
+<h1>Complete</h1>
+<p>
+  <%= button_to "Mark as Complete", complete_task_path(@task), method: :patch, data: { confirm: "Mark this task as complete?" } %>
+</p>
 
 <h1>Edit</h1>
 <p><%= link_to "Edit Task", edit_task_path(@task) %></p>
 <p><%= link_to "Back to Tasks", tasks_path %></p>
+
+<h1>Delete</h1>
+<p>
+  <%= button_to "Delete Task", delete_task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+</p>

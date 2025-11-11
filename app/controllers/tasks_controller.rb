@@ -33,6 +33,18 @@ class TasksController < ApplicationController
     end
   end
 
+  def complete
+    @task = Task.find(params[:id])
+    @task.update(status: 3)
+    redirect_to @task
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path, notice: "Task deleted."
+  end
+
   private
 
   def task_params
@@ -41,4 +53,5 @@ class TasksController < ApplicationController
       :time_bound, :start_date, :due_date, :completion_date, :status, :priority
     )
   end
+
 end

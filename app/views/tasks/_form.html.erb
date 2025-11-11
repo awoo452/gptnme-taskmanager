@@ -10,13 +10,59 @@
   </p>
 
   <p>
-    <%= f.label :priority %><br>
-    <%= f.number_field :priority %>
+    <%= f.label :specific %><br>
+    <%= f.text_area :specific %>
+  </p>
+
+  <p>
+    <%= f.label :measurable %><br>
+    <%= f.text_area :measurable %>
+  </p>
+
+  <p>
+    <%= f.label :achievable %><br>
+    <%= f.text_area :achievable %>
+  </p>
+
+  <p>
+    <%= f.label :relevant %><br>
+    <%= f.text_area :relevant %>
+  </p>
+
+  <p>
+    <%= f.label :time_bound %><br>
+    <%= f.text_area :time_bound %>
+  </p>
+
+  <p>
+    <%= f.label :start_date %><br>
+    <%= f.date_field :start_date %>
+  </p>
+
+  <p>
+    <%= f.label :due_date %><br>
+    <%= f.date_field :due_date %>
+  </p>
+
+  <p>
+    <%= f.label :completion_date %><br>
+    <%= f.date_field :completion_date %>
   </p>
 
   <p>
     <%= f.label :status %><br>
-    <%= f.number_field :status %>
+    <%= f.select :status, [
+        ['Not Started', 0],
+        ['In Progress', 1],
+        ['On Hold', 2],
+        ['Completed', 3]
+      ], {}, { class: "form-control" } %>
+  </p>
+
+
+  <p>
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
   </p>
 
   <p>
