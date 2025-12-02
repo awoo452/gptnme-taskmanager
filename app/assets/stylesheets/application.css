@@ -1,10 +1,150 @@
+/* application.css */
 /*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
+ *= require_self
  */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+/* FIXED BODY — removed flex garbage */
+body {
+  padding: 1rem;
+}
+
+/* Optional container if you ever want it */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Generic headings */
+h1 {
+  font-size: 1.8rem;
+  margin: 1.5rem 0 1rem;
+  color: #f9fafb;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 0.4rem;
+}
+
+/* Task index list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+ul li a {
+  display: block;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.35rem;
+  background-color: #111827;
+  color: #e5e7eb;
+  text-decoration: none;
+  border: 1px solid #1f2937;
+  transition: background-color 0.15s ease, transform 0.08s ease;
+}
+
+ul li a:hover {
+  background-color: #1f2937;
+  transform: translateY(-1px);
+}
+
+/* Task show card */
+.task-show {
+  background-color: #020617;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.task-show p {
+  margin: 0 0 0.75rem;
+}
+
+.task-show ul {
+  margin-top: 0.5rem;
+}
+
+.task-show li {
+  margin: 0.2rem 0;
+}
+
+/* Labels inside show view */
+.task-show strong {
+  display: inline-block;
+  min-width: 130px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Action sections */
+.task-actions h1 {
+  font-size: 1.2rem;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.task-actions p {
+  margin: 0.3rem 0;
+}
+
+/* Links and buttons */
+a {
+  color: #60a5fa;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* button_to */
+button,
+input[type="submit"] {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #1d4ed8;
+  background-color: #2563eb;
+  color: #f9fafb;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.08s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+button:disabled,
+input[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+
+/* "New Task" link on index */
+.new-task-link a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background-color: #111827;
+  text-decoration: none;
+}
+
+.new-task-link a:hover {
+  background-color: #1f2937;
+}

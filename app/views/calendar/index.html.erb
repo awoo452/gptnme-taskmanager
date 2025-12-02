@@ -1,0 +1,15 @@
+<h1>Calendar</h1>
+
+<%= month_calendar events: @tasks, attribute: :due_date do |date, tasks| %>
+  <div>
+    <strong><%= date.day %></strong>
+
+    <% tasks.each do |t| %>
+      <div><%= link_to t.task_name, task_path(t) %></div>
+    <% end %>
+
+    <div style="margin-top: 4px;">
+      <%= link_to "View Day", calendar_day_path(date: date), style: "font-size: 0.75rem;" %>
+    </div>
+  </div>
+<% end %>

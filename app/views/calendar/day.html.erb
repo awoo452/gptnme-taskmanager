@@ -1,0 +1,13 @@
+<h1><%= @date.strftime("%B %d, %Y") %></h1>
+
+<% if @tasks.any? %>
+  <ul>
+    <% @tasks.each do |t| %>
+      <li><%= link_to t.task_name, task_path(t) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No tasks for this date.</p>
+<% end %>
+
+<p><%= link_to "Back to Calendar", calendar_path %></p>

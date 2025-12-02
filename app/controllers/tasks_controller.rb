@@ -45,6 +45,16 @@ class TasksController < ApplicationController
     redirect_to tasks_path, notice: "Task deleted."
   end
 
+  def calendar
+    @tasks = Task.all
+  end
+
+  def day
+    date = params[:date].present? ? Date.parse(params[:date]) : Date.current
+    @tasks = Task.where(due_date: date)
+    @date = date
+  end
+
   private
 
   def task_params

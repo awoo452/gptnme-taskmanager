@@ -1,3 +1,19 @@
+## [0.0.0] – Unreleased (12/1/2025)
+
+Added
+- SimpleCalendar integrated as a standalone calendar app under /calendar.
+- CalendarController with index (monthly) and day views.
+- Calendar routes added: /calendar and /calendar/day.
+- Navigation link for Calendar added to layout.
+
+Updated
+- application.css cleaned up and fixed (removed flex layout, simplified styling).
+- Task views now render correctly with the cleaned-up CSS.
+
+Fixed
+- Calendar no longer breaks layout or pushes nav bar off alignment.
+- Route ordering issues causing /calendar to fall into tasks#show.
+
 ## [0.0.0] – Unreleased
 
 ### Added
